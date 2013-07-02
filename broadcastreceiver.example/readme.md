@@ -12,3 +12,27 @@ needed.
 
 Run the application as an android application to make sure the application is copied to the phone and runs on
 the phone.
+
+
+###Create a Broadcastreceiver for Phone orientation.
+We are going to create a broadcastreceiver for when the user orientates the phone. Create another package called 
+
+
+```java
+package za.co.nanosoft.receivers;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+public class OrientationReceiver extends BroadcastReceiver {
+
+  @Override
+	public void onReceive(Context context, Intent intent) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
+```
