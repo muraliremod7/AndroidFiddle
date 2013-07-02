@@ -15,7 +15,7 @@ the phone.
 
 
 ###Create a Broadcastreceiver for Phone orientation.
-We are going to create a broadcastreceiver for when the user orientates the phone. Create another package called 
+We are going to create a broadcastreceiver for when the user orientates the phone. Create a class that looks like 
 
 
 ```java
