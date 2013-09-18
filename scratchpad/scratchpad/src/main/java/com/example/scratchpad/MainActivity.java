@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         amountEditText.setText("1000"); //set main ET to 1000
         tipPercentageSlider.setProgress(2); //set the default tip % to 12 %
 
-        setTipPercentageLabel();
+        setTipPercentageLabel(2);
         setTipValue(); //set the tip amount
 
         //Listeners
@@ -78,6 +78,8 @@ public class MainActivity extends Activity {
             public void afterTextChanged(Editable editable) {
                 setTipPercentageLabel();
 
+
+
             }
         });
 
@@ -117,7 +119,6 @@ public class MainActivity extends Activity {
 
     }
 
-
     private String FormatMoney(double number){
         DecimalFormat df = new DecimalFormat("##0.00");
         String result = df.format(number);
@@ -125,8 +126,23 @@ public class MainActivity extends Activity {
 
     }
 
+    private String FormatPercentage(double number){
+        DecimalFormat df = new DecimalFormat("#0.#");
+        String result = df.format(number);
+        return result;
+
+    }
+
     private void setTipPercentageLabel() {
-        String x = "Tip (" + percent[tipPercentageSlider.getProgress()] + " %)";
+        double tip = Double.parseDouble(String.valueOf(tipEditText.getText().toString()));
+        double amount  = Double.parseDouble(String.valueOf(amountEditText.getText().toString()));
+        double percentage = (tip/amount ) *100;
+        String x = "Tip (" + FormatPercentage(percentage) + " %)";
+        tipPercentageLabel.setText(x);
+    }
+
+    private void setTipPercentageLabel(int position) {
+        String x = "Tip (" + Double.parseDouble(percent[position]) + " %)";
         tipPercentageLabel.setText(x);
     }
 
