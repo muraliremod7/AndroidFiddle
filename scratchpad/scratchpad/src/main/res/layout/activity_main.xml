@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Amount"
+        />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="18sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip"
+        android:layout_below="@+id/amount"
+        />
+
+    <SeekBar
+        android:id="@+id/tipslide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipLabel"
+        android:paddingTop="20dp"
+        android:max="7"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/tipslide"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip Amount"
+            />
+
+        <EditText
+            android:id="@+id/tipamount"
+            android:layout_width="100dp"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
