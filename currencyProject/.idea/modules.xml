@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/currency/currency.iml" filepath="$PROJECT_DIR$/currency/currency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/currencyProject.iml" filepath="$PROJECT_DIR$/currencyProject.iml" />
+    </modules>
+  </component>
+</project>
+
